@@ -40,12 +40,12 @@
 --  3  2019  550.9985714285714
 --
 --  >>> Escriba su codigo a partir de este punto <<<\
-SELECT 
-    strftime('%Y', c23),
-    avg(c21)
+SELECT
+    strftime('%Y', c23) AS "strftime('%Y', c23)", 
+    AVG(c21) AS 'avg(c21)'
 FROM 
     tbl2
 GROUP BY 
     strftime('%Y', c23)
-ORDER BY strftime('%Y', c23);
-    ;
+ORDER BY 
+    strftime('%Y', c23);
